@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Comics</title>
+        <title>Comic</title>
     </head>
 
     <body>
-        <h1>Comics</h1>
+        <h1>Comic</h1>
         <table>
             <thead>
                 <tr>
@@ -20,16 +20,13 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($comics as $comic)
-                    <tr>                        
-                        <td>{{$comic->title}}</td>
-                        <td>{{$comic->description}}</td>
-                        <td><img src="{{$comic->thumb}}"></td>
-                        <td>{{$comic->price}} €</td>
-                        <td>{{$comic->sale_date}}</td>
-                        <td><a href="{{route('comics.show', $comic->id)}}">View More</a></td>                            
-                    </tr>
-                @endforeach
+                <tr>
+                    <td>{{$comic->title}}</td>
+                    <td>{{$comic->description}}</td>
+                    <td><img src="{{$comic->thumb}}"></td>
+                    <td>{{$comic->price}} €</td>
+                    <td>{{$comic->sale_date}}</td>
+                </tr>
             </tbody>
         </table>
     </body>
