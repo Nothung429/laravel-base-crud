@@ -4,33 +4,36 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Comics</title>
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <title>@yield('page-title')</title>
     </head>
 
     <body>
-        <h1>Comics</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>TITOLO</th>
-                    <th>DESCRIZIONE</th>
-                    <th>COPERTINA</th>
-                    <th>PREZZO</th>
-                    <th>DATA D'USCITA</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($comics as $comic)
-                    <tr>                        
-                        <td>{{$comic->title}}</td>
-                        <td>{{$comic->description}}</td>
-                        <td><img src="{{$comic->thumb}}"></td>
-                        <td>{{$comic->price}} €</td>
-                        <td>{{$comic->sale_date}}</td>
-                        <td><a href="{{route('comics.show', $comic->id)}}">View More</a></td>                            
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+        <header>        
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">DC Comix</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{route('comics.index')}}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('comics.create')}}">Add Comic</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>            
+        </header>
+
+        <main>
+            <div class="container my-5">
+                @yield('page-content')
+            </div>
+        </main>
     </body>
 </html>
