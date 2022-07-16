@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Comic</title>
-    </head>
+@extends('homepage')
 
-    <body>
-        <h1>Comic</h1>
-        <table>
+@section('page-title')
+    {{$comic->title}}
+@endsection
+
+@section('page-content')
+    <h1 class="text-center">Comic</h1>
+    <div class="container-custom">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>TITOLO</th>
@@ -29,5 +27,5 @@
                 </tr>
             </tbody>
         </table>
-    </body>
-</html>
+    </div>
+@endsection

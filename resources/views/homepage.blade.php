@@ -31,7 +31,7 @@
         </header>
 
         <main>
-            <div class="container my-5">
+            <div class="container my-3">
                 @yield('page-content')
             </div>
         </main>
