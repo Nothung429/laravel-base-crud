@@ -36,7 +36,7 @@
 
         <div class="mb-3">
             <label for="sale_date" class="form-label">Release Date</label>
-            <input type="text" class="form-control" id="sale_date" name="sale_date">
+            <input type="text" class="form-control" id="sale_date" name="sale_date" placeholder="YYYY-MM-DD">
         </div>
 
         <div class="mb-3">

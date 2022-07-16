@@ -5,27 +5,28 @@
 @endsection
 
 @section('page-content')
-    <h1 class="text-center">Comic</h1>
-    <div class="container-custom">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>TITOLO</th>
-                    <th>DESCRIZIONE</th>
-                    <th>COPERTINA</th>
-                    <th>PREZZO</th>
-                    <th>DATA D'USCITA</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{{$comic->title}}</td>
-                    <td>{{$comic->description}}</td>
-                    <td><img src="{{$comic->thumb}}"></td>
-                    <td>{{$comic->price}} €</td>
-                    <td>{{$comic->sale_date}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>COVER</th>
+                <th>TITLE</th>
+                <th>DESCRIPTION</th>
+                <th>PRICE</th>
+                <th>RELEASE DATE</th>
+                <th>SERIES</th>
+                <th>TYPE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img width="100" src="{{$comic->thumb}}"></td>
+                <td>{{$comic->title}}</td>
+                <td>{{$comic->description}}</td>                    
+                <td>{{$comic->price}} €</td>
+                <td>{{$comic->sale_date}}</td>
+                <td>{{$comic->series}}</td>
+                <td>{{$comic->type}}</td>
+            </tr>
+        </tbody>
+    </table>
 @endsection
